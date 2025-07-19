@@ -1,0 +1,43 @@
+title: KiCad Jekyll Report
+description: >-
+  A Jekyll site dedicated to generating reports for KiCad projects.
+permalink: /:slug
+theme: just-the-docs
+plugins:
+  - jemoji
+
+sass:
+  style: :compressed
+
+just_the_docs:
+  logo: "/assets/images/logo.png"
+  search_enabled: true
+  heading_anchors: true
+  aux_links:
+    GitHub Repository: https://github.com/miqap/wall-moisture
+
+project: 
+  renders:
+    - title: "Render Top Angled"
+      image_suffix: "-3d_top_angled.png"
+    - title: "Render Top"
+      image_suffix: "-3d_top.png"
+    - title: "Render Bottom"
+      image_suffix: "-3d_bottom.png"
+
+  schematic_variants:
+    - name: "Dark"
+      file_suffix: "-schematic-dark.pdf"
+    - name: "Monochromatic"
+      file_suffix: "-schematic-mono.pdf"
+    - name: "Light"
+      file_suffix: "-schematic-default.pdf"
+
+  assembly_variants:
+    - name: "Dark"
+      file_suffix: "-pcb-dark.pdf"
+    - name: "Light"
+      file_suffix: "-pcb-light.pdf"
+
+  manufacturers: ["JLCPCB", "Eurocircuits"]
+
