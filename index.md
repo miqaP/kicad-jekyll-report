@@ -48,11 +48,11 @@ View the PCB / Schematic in an interactive way, pan and zoom to see the details.
 
 #### Dark
 
-- [KiRi Dark]({{ "/KiRiDark/index.html" | absolute_url | append: cacheBust }})
+- [KiRi Dark]({{ "/kiri-dark/index.html" | absolute_url | append: cacheBust }})
 
 #### Light
 
-- [KiRi Light]({{ "/KiRiLight/index.html" | absolute_url | append: cacheBust }})
+- [KiRi Light]({{ "/kiri-light/index.html" | absolute_url | append: cacheBust }})
 
 ### Downloads
 {% for manufacturer in project.manufacturers %}
