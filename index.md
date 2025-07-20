@@ -5,7 +5,7 @@ title: Home
 
 {% assign project = site.project %}
 {% assign cacheBust = site.time | date:'?v=%s' %}
-
+# {{ project.title }} v{{ project.version }}
 ![Main Render]({{ "/images/" | append: project.name | append: "-3d_top_angled.png" | absolute_url | append: cacheBust }}){: width="400" }
 
 {{ project.description }}
