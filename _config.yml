@@ -23,6 +23,7 @@ exclude:
 
 include:
   - _KIRI_
+  - _KIRI_/*.json
 
 just_the_docs:
   logo: "/assets/images/logo.png"
