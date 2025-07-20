@@ -21,6 +21,10 @@ exclude:
   - package-lock.json
   - commitlint.config.js
 
+include:
+  - kiri-light
+  - kiri-dark
+
 just_the_docs:
   logo: "/assets/images/logo.png"
   search_enabled: true
