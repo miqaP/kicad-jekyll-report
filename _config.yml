@@ -1,6 +1,3 @@
-title: KiCad Jekyll Report
-description: >-
-  A Jekyll site dedicated to generating reports for KiCad projects.
 permalink: /:slug
 theme: just-the-docs
 plugins:
@@ -9,12 +6,25 @@ plugins:
 sass:
   style: :compressed
 
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - commitlint.config.js
+
 just_the_docs:
   logo: "/assets/images/logo.png"
   search_enabled: true
   heading_anchors: true
-  aux_links:
-    GitHub Repository: https://github.com/miqap/wall-moisture
 
 project: 
   renders:
@@ -38,6 +48,3 @@ project:
       file_suffix: "-pcb-dark.pdf"
     - name: "Light"
       file_suffix: "-pcb-light.pdf"
-
-  manufacturers: ["JLCPCB", "Eurocircuits"]
-
