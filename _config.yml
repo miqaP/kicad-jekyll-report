@@ -9,6 +9,21 @@ plugins:
 sass:
   style: :compressed
 
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - commitlint.config.js
+
 just_the_docs:
   logo: "/assets/images/logo.png"
   search_enabled: true
