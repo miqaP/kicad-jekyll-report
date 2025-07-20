@@ -57,7 +57,7 @@ View the PCB / Schematic in an interactive way, pan and zoom to see the details.
 ### Downloads
 {% for manufacturer in project.manufacturers %}
 #### {{ manufacturer }}
-- [{{ manufacturer }} Zip]({{ "export/" | append: project.name | append: "-" | append: manufacturer | append: ".zip" | absolute_url | append: cacheBust }})
+- [{{ manufacturer }} Zip]({{ "export/" | append: project.name | append: "-" | append: manufacturer | downcase | append: ".zip" | absolute_url | append: cacheBust }})
 - [BOM CSV]({{ "export/" | append: project.name | append: "_bom_" | append: manufacturer | downcase | append: ".csv" | absolute_url | append: cacheBust }})
 - [CPL CSV]({{ "export/" | append: project.name | append: "_cpl_" | append: manufacturer | downcase | append: ".csv" | absolute_url | append: cacheBust }})
 {% endfor %}
