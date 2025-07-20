@@ -22,8 +22,7 @@ exclude:
   - commitlint.config.js
 
 include:
-  - kiri-light/**
-  - kiri-dark/**
+  - _KIRI_
 
 just_the_docs:
   logo: "/assets/images/logo.png"
