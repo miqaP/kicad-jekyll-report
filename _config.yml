@@ -41,15 +41,16 @@ project:
       image_suffix: "-3d_bottom.png"
 
   schematic_variants:
-    - name: "Dark"
-      file_suffix: "-schematic-dark.pdf"
-    - name: "Monochromatic"
-      file_suffix: "-schematic-mono.pdf"
     - name: "Light"
-      file_suffix: "-schematic-default.pdf"
+      file_suffix: "-schematic_default.pdf"
+    - name: "Dark"
+      file_suffix: "-schematic_dark.pdf"
+    - name: "Monochromatic"
+      file_suffix: "-schematic_mono.pdf"
 
   assembly_variants:
-    - name: "Dark"
-      file_suffix: "-pcb-dark.pdf"
     - name: "Light"
-      file_suffix: "-pcb-light.pdf"
+      file_suffix: "-layout_light.pdf"
+    - name: "Dark"
+      file_suffix: "-layout_dark.pdf"
+

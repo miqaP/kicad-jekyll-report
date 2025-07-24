@@ -10,8 +10,7 @@ title: Home
 
 {{ project.description }}
 
-[![CI](https://github.com/{{ project.repo }}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{ project.repo }}/actions/workflows/ci.yml)
-![GitHub last commit](https://img.shields.io/github/last-commit/{{ project.repo }})
+[GitHub link]({{ project.repository }})
 
 ## Table of Contents
 {% for section in project.sections %}
@@ -28,7 +27,7 @@ title: Home
 - [{{ variant.name }} PDF]({{ "/documents/" | append: project.name | append: variant.file_suffix | absolute_url | append: cacheBust }})
 {% endfor %}
 
-### Assembly
+### Layout
 {% for variant in project.assembly_variants %}
 - [{{ variant.name }} PDF]({{ "/documents/" | append: project.name | append: variant.file_suffix | absolute_url | append: cacheBust }})
 {% endfor %}
@@ -42,29 +41,29 @@ title: Home
 
 ### KiCad Revision Inspector (KiRI)
 
-KiCad Revision Inspector (KiRI) is a tool for comparing different versions of KiCad projects. It exports project revisions to SVG format for visual comparison using an onion skin view. This helps identify changes and errors in PCB designs. KiRI also includes a command line interface for generating viewable artifacts in any web browser.
+KiCad Revision Inspector (KiRI) is a tool for comparing different versions of KiCad projects. It exports project revisions to SVG format for visual comparison using an onion skin view. This helps identify changes and errors in PCB designs.
 
-View the PCB / Schematic in an interactive way, pan and zoom to see the details.
+#### Light
+
+- [KiRi Light]({{ "/kiri-light/index.html" | absolute_url | append: cacheBust }})
 
 #### Dark
 
 - [KiRi Dark]({{ "/kiri-dark/index.html" | absolute_url | append: cacheBust }})
 
-#### Light
 
-- [KiRi Light]({{ "/kiri-light/index.html" | absolute_url | append: cacheBust }})
 
 ### Downloads
 {% for manufacturer in project.manufacturers %}
 {% assign manufacturer_lc = manufacturer | downcase %}
 #### {{ manufacturer }}
 - [BOM/CPL ZIP]({{ "export/" | append: project.name | append: "-" | append: manufacturer_lc | append: ".zip" | absolute_url | append: cacheBust }})
-- [BOM CSV]({{ "export/" | append: project.name | append: "_bom_" | append: manufacturer_lc | append: ".csv" | absolute_url | append: cacheBust }})
-- [CPL CSV]({{ "export/" | append: project.name | append: "_cpl_" | append: manufacturer_lc | append: ".csv" | absolute_url | append: cacheBust }})
+- [BOM CSV]({{ "export/" | append: project.name | append: "-bom_" | append: manufacturer_lc | append: ".csv" | absolute_url | append: cacheBust }})
+- [CPL CSV]({{ "export/" | append: project.name | append: "-cpl_" | append: manufacturer_lc | append: ".csv" | absolute_url | append: cacheBust }})
 {% endfor %}
 
 #### 3D Step
-- [STEP File]({{ "/" | append: project.name | append: "-3D.step" | absolute_url | append: cacheBust }})
+- [STEP File]({{ "/" | append: project.name | append: "-3d.step" | absolute_url | append: cacheBust }})
 
 ## Reports
 {% include_relative erc_validation.md %}
